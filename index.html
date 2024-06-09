@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=10.0">
+    <title>Resume Screening AI Based System</title>
+    <link rel="icon" href="best-initial-letter-r-logo-design-graphic-download-vector-35165466.jpg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #00ffff, #808080);
+            background-size: 100% 100%;
+            animation: gradientAnimation 1s ease infinite;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            scroll-behavior: smooth;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .heading2 {
+            margin-left: 0;
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .heading1 {
+            font-family: 'Play', sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-top: 90px;
+            margin-bottom: -90px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #fff;
+            text-align: center;
+            background: linear-gradient(to right, #ff5858, #f857a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: neon 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes neon {
+            from {
+                text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 20px #00ffcc;
+            }
+            to {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0099ff;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .logo-container {
+            margin-left: 165px;
+            margin-top: -70px;
+            margin-bottom: -70px;
+        }
+
+        .tagline {
+            z-index: 1;
+            font-size: 1.2rem;
+            font-weight: 400;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: -90px;
+            animation: fadeIn 2.5s ease-in-out;
+
+        }
+
+        .container {
+            background: rgba(0, 10, 127, 0.5);
+            backdrop-filter: blur(10px);
+            max-width: 1000px;
+            margin: 20px;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .container p {
+            margin: 0 0 20px 0;
+            display: block;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        h2 {
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        input[type="file"],
+        input[type="text"],
+        input[type="email"] {
+            width: calc(100% - 16px);
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(192, 192, 192, 0.7);
+            color: white;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        input[type="file"]::placeholder,
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder {
+            color: #ddd;
+        }
+
+        input[type="file"]:focus,
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(to right, #00ffcc, #0099ff);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-weight: 600;
+            transition: all 0.1s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(to left, #00ffcc, #0099ff);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-align: left;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .form-container .left-column,
+        .form-container .right-column {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .upload {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .generate {
+            text-align: center;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            margin-right: -30px;
+            margin-left: -30px;
+        }
+
+        .divider hr {
+            flex: 1;
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            margin: 0 10px;
+            box-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .divider span {
+            color: white;
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        a {
+            color: #00ffcc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0099ff;
+        }
+
+        button {
+            background: linear-gradient(to right, #ff5858, #f857a6);
+            border: none;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-weight: 600;
+            transition: all 0.s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background: linear-gradient(to left, #ff5858, #f857a6);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
+        }
+
+
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Marcellus&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <div class="logo-container">
+        <img src="static/ins1.png" alt="AI-Resume Insight" width="300" height="240">
+    </div>
+    <div class="holder">
+        <p class="heading1">AI-Resume Insight</p>
+        <p class="tagline">"Insightful Suggestions, Personalized for Your Career Path"</p>
+    </div>
+
+
+    <div class="divider">
+        <hr>
+    </div>
+
+    <div class="form-container">
+        <div class="upload">
+            <h2 class="heading2">Upload Resume</h2>
+            <form id="upload-form" method="post" enctype="multipart/form-data" action="/upload">
+                <input type="file" name="resume" accept=".pdf" required>
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+    </div>
+
+    <div class="divider">
+        <hr>
+        <span>or</span>
+        <hr>
+    </div>
+
+    <div class="generate">
+        <h2>Generate Resume</h2>
+        <form id="generate-pdf-form" method="post" action="/generate_pdf">
+            <div class="form-group">
+                <label for="full_name">Full Name:</label>
+                <input type="text" id="full_name" name="full_name" placeholder="e.g. Robert Downey Jr." required>
+            </div>
+            <div class="form-group">
+                <label for="phone_number">Contact Number:</label>
+                <input type="text" id="phone_number" name="phone_number" placeholder="e.g. +1234567890" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="e.g. rdj@mail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills/Language:</label>
+                <input type="text" id="skills" name="skills" placeholder="e.g. JavaScript, Python, SQL" required>
+            </div>
+            <div class="form-group">
+                <label for="education">Academic Field:</label>
+                <input type="text" id="education" name="education" placeholder="e.g. Computer Science" required>
+            </div>
+            <div class="form-group">
+                <label for="work_experience">Years of Experience:</label>
+                <input type="text" id="work_experience" name="work_experience" placeholder="e.g. 5 years" required>
+            </div>
+            <div class="form-group">
+                <label for="colleges">College:</label>
+                <input type="text" id="colleges" name="colleges" placeholder="e.g. ABC University" required>
+            </div>
+            <div class="form-group">
+                <label for="job_roles">Job Roles:</label>
+                <input type="text" id="job_roles" name="job_roles"
+                       placeholder="e.g. Frontend Developer, Data Analyst" required>
+            </div>
+            <input type="submit" value="Generate PDF">
+        </form>
+    </div>
+    <div class="divider">
+        <hr>
+    </div>
+    <div id="results"></div>
+
+    <h2>Generative AI</h2>
+<form id="generateForm" action="/generate" method="post">
+    <label for="prompt">Enter a prompt:</label>
+    <input type="text" id="prompt" name="prompt" required>
+    <input type="submit" value="Generate Response">
+</form>
+
+<h2>Generated Response</h2>
+<p id="response">{{response}}</p>
+
+</div>
+<script>
+    document.body.style.zoom="140%";
+    document.getElementById('upload-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+        const response = await fetch('/upload', {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await response.json();
+        const resultsDiv = document.getElementById('results');
+        resultsDiv.innerHTML = `
+            <h2>Extracted Information</h2>
+            <p><strong>Name:</strong> ${result.name}</p>
+            <p><strong>Contact Number:</strong> ${result.contact_number}</p>
+            <p><strong>Email:</strong> ${result.email}</p>
+            <p><strong>Skills:</strong> ${result.skills.join(', ')}</p>
+            <p><strong>Education:</strong> ${result.education.join(', ')}</p>
+            <p><strong>Work Experience:</strong> ${result.work_experience}</p>
+            <p><strong>Colleges:</strong> ${result.colleges.join(', ')}</p>
+            <p><strong>Job Roles:</strong> ${result.job_roles.join(', ')}</p>
+            <p><h2>Suggestion:</h2> ${formatSuggestion(result.suggestion)}</p>
+        `;
+    });
+
+    document.getElementById('generate-pdf-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+
+        const response = await fetch('/generate_pdf', {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await response.json();
+        alert(`PDF generated at: ${result.pdf_path}`);
+    });
+
+    document.getElementById('generateForm').addEventListener('submit', async function(event) {
+        event.preventDefault(); // Prevent form from submitting the traditional way
+
+        // Get the prompt value
+        const prompt = document.getElementById('prompt').value;
+
+        // Prepare the data to send
+        const formData = new FormData();
+        formData.append('prompt', prompt);
+
+        try {
+            // Send the POST request to the server
+            const response = await fetch('/generate', {
+                method: 'POST',
+                body: formData
+            });
+
+            // Check if the response is okay
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            // Parse the JSON response
+            const data = await response.json();
+
+            // Update the page with the response
+            document.getElementById('response').textContent = data.response;
+        } catch (error) {
+            console.error('Error:', error);
+            document.getElementById('response').textContent = 'An error occurred while generating the response.';
+        }
+    });
+
+    function formatSuggestion(suggestion) {
+
+        const sentences = suggestion.split('.').map(sentence => sentence.trim()).filter(sentence => sentence.length > 0);
+        let formattedSentences = '';
+        let inList = false;
+
+        sentences.forEach(sentence => {
+            // Check if the sentence contains bold text
+            const boldTextMatch = sentence.match(/\*\*(.+?)\*\*/);
+            if (boldTextMatch) {
+                // If currently in a list, close it
+                if (inList) {
+                    formattedSentences += '</ul>';
+                    inList = false;
+                }
+                const boldText = boldTextMatch[1];
+                const restText = sentence.replace(`**${boldText}**`, '').trim();
+                formattedSentences += `<p><strong>${boldText}:</strong> ${restText}</p>`;
+            } else {
+                // Start a list if not already in one
+                if (!inList) {
+                    formattedSentences += '<ul>';
+                    inList = true;
+                }
+                formattedSentences += `<li>${sentence}</li>`;
+            }
+        });
+
+        // Close the list if still open
+        if (inList) {
+            formattedSentences += '</ul>';
+        }
+
+        return formattedSentences;
+    }
+</script>
+</body>
+</html>
+
+
+
