@@ -106,24 +106,12 @@ Enter your questions or prompts in the AI chatbox to get instant responses based
 Project Structure
 plaintext
 Copy code
-AI-Resume-Insight/
-│
-├── env                # Backend Flask application and create the files in an environment
-│   ├── app.py
-│   ├── (Parser Folder)/
-│   └── ...
-│
-├── env               # Frontend React application
-│   ├── index.html
-│   ├── (Parser Folder)/   # use the same folder as used for app.py
-│   └── ...
-│
-├── static                 # Static files (images, etc.)
-│   ├── Logo.jpg  
-|   |-- Static/
-│   ├── (Parser Folder)/
-│   └── ...
-└── 
+ 
+Structure- 
+env/Parser folder =  app.py
+                     index.html
+                     staticfolder/logo.jpg
+                     uploads folder
 
 API Endpoints-
 Backend
