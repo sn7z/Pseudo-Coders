@@ -7,7 +7,7 @@ from pdfminer.high_level import extract_text
 from fpdf import FPDF
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyCLZMT3xhqG9r3MVQxcRf2nKrm2j8XBJAk")
+genai.configure(api_key="your api key")
 model = genai.GenerativeModel('gemini-1.5-flash')
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
